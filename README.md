@@ -20,6 +20,16 @@ From another tab, send the image file in a request:
 
     curl -X POST -F file=@kitten.jpeg http://localhost:5000/predict
 
+Run Through Docker:
+
+## Build
+
+    docker image build -t flask-ml .
+
+## Run 
+
+    docker run -p 5000:5000 -d flask-ml
+
 
 ## License
 
