@@ -20,7 +20,7 @@ From another tab, send the image file in a request:
 
     curl -X POST -F file=@kitten.jpeg http://localhost:5000/predict
 
-#Run Through Docker:
+# Run Through Docker:
 
 ## Build
 
