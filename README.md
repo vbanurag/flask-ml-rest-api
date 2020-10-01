@@ -20,7 +20,7 @@ From another tab, send the image file in a request:
 
     curl -X POST -F file=@kitten.jpeg http://localhost:5000/predict
 
-Run Through Docker:
+#Run Through Docker:
 
 ## Build
 
@@ -29,6 +29,20 @@ Run Through Docker:
 ## Run 
 
     docker run -p 5000:5000 -d flask-ml
+
+# Kubernetes
+
+## deploy
+
+    kubectl apply -f deployment.yaml
+
+## Run 
+
+    kubectl port-forward <app-pod> 5000:5000
+
+## Delete pod
+
+    kubectl delete deployment flask-ml       
 
 
 ## License
