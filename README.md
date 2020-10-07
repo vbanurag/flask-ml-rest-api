@@ -15,6 +15,10 @@ Run the Flask server:
 
     python app.py
 
+### gunicorn
+
+    gunicorn -w 4 -b :5000 app:app --log-level debug
+
 
 From another tab, send the image file in a request:
 
