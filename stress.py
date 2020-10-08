@@ -15,11 +15,11 @@ def call_predict_endpoint(n):
 	image = open(IMAGE_PATH, "rb").read()
 	payload = {"file": image}
 	# submit the request
-	try:
+	try:		
 		r = requests.post(KERAS_REST_API_URL, files=payload).json()
 		# ensure the request was sucessful
 		if r["class_name"]:
-			print("[INFO] thread {} OK".format(n))
+			print("[INFO] thread {} OK Time: {}".format(n, r["time"]))
 		# otherwise, the request failed
 		else:
 			print("[INFO] thread {} FAILED".format(n))
